@@ -1735,3 +1735,44 @@ canvas {
     transition-duration: 0.001ms !important;
   }
 }
+/* --- ChatGPT-Style Clean Markdown Typography --- */
+.bot-message, 
+.message-content,
+.chat-message {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1e293b;
+}
+
+/* Paragraph spacing */
+.bot-message p,
+.message-content p {
+    margin: 0 0 12px 0;
+}
+
+.bot-message p:last-child,
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* List spacing and indentation */
+.bot-message ul,
+.bot-message ol,
+.message-content ul,
+.message-content ol {
+    margin: 8px 0 14px 24px;
+    padding-left: 0;
+}
+
+.bot-message li,
+.message-content li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/* Bold highlights */
+.bot-message strong,
+.message-content strong {
+    font-weight: 600;
+    color: #0f172a;
+}

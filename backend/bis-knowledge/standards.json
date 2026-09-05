@@ -1,0 +1,92 @@
+[
+  {
+    "id": "BIS-001",
+    "question": "What is BIS certification and its primary objective?",
+    "answer": "BIS certification is a third-party conformity assessment scheme implemented by the Bureau of Indian Standards that provides third-party assurance of quality, safety, and reliability of products to the customer. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal - Scheme-I (ISI Mark)",
+    "clause": "Section 13",
+    "keywords": ["certification", "bis", "objective", "what is bis", "isi mark", "overview"]
+  },
+  {
+    "id": "BIS-002",
+    "question": "How can a manufacturer obtain a BIS license under Scheme-I?",
+    "answer": "Manufacturers apply online via Manakonline, submit manufacturing and testing infrastructure details, pay application fees, undergo a factory audit by BIS officers, pass sample testing in an approved lab, and receive the license once compliance is verified. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/Conformity-Assessment-Regulation-2018.pdf",
+    "standard": "IS/ISO 9001 aligned Scheme-I",
+    "source": "BIS Conformity Assessment Regulations 2018",
+    "clause": "Regulation 4",
+    "keywords": ["get bis", "obtain license", "apply", "scheme-i", "process", "factory audit"]
+  },
+  {
+    "id": "BIS-003",
+    "question": "What is the Compulsory Registration Scheme (CRS)?",
+    "answer": "CRS is a simplified regulatory compliance scheme specifically for electronic and IT goods under Order issued by MeitY. Products must be tested in BIS-recognized labs, followed by online registration without a prior factory inspection. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
+    "standard": "Scheme-II (CRS)",
+    "source": "Electronics and IT Goods (Requirement for Compulsory Registration) Order",
+    "clause": "Schedule II",
+    "keywords": ["crs", "compulsory registration scheme", "electronics", "meity", "it goods"]
+  },
+  {
+    "id": "BIS-004",
+    "question": "What is the Hallmarking scheme for gold and silver?",
+    "answer": "Hallmarking provides third-party certification of the purity and fineness of precious metals. For gold, it consists of three marks: the BIS logo, purity/fineness grade (e.g., 22K916), and a 6-digit alphanumeric HUID (Hallmark Unique Identification). PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/brief-on-Hallmarking.pdf",
+    "standard": "IS 1417 / IS 2112",
+    "source": "BIS Hallmarking Regulations",
+    "clause": "Section 14 & 15",
+    "keywords": ["hallmark", "gold", "silver", "huid", "purity", "jewellery"]
+  },
+  {
+    "id": "BIS-005",
+    "question": "What is the Foreign Manufacturers Certification Scheme (FMCS)?",
+    "answer": "FMCS grants a license to overseas manufacturing units enabling them to use the standard mark (ISI) on products exported to India. The audit requires an on-site inspection by BIS officials at the overseas factory. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/FMCS_Guidelines.pdf",
+    "standard": "FMCS Scheme-I",
+    "source": "BIS Guidelines for Foreign Manufacturers",
+    "clause": "Clause 3.2",
+    "keywords": ["fmcs", "foreign manufacturer", "import", "overseas", "export to india"]
+  },
+  {
+    "id": "BIS-006",
+    "question": "What is the difference between voluntary and mandatory BIS standards?",
+    "answer": "While BIS certification is generally voluntary, the Government of India issues Quality Control Orders (QCOs) making certification mandatory for specific goods related to public interest, safety, environment, or human health. PDF Link: https://www.bis.gov.in/wp-content/uploads/2021/11/Guidance-Document-on-QCOs.pdf",
+    "standard": "BIS Act 2016",
+    "source": "Quality Control Orders (QCO) Repository",
+    "clause": "Section 16",
+    "keywords": ["voluntary", "mandatory", "qco", "quality control order", "compulsory"]
+  },
+  {
+    "id": "BIS-007",
+    "question": "How can consumers verify a BIS ISI mark or Hallmark?",
+    "answer": "Consumers can verify marks using the 'BIS Care' mobile application by entering the CM/L (Certification/License) number or scanning the HUID code directly to check manufacturer validity and product details. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Care-App.pdf",
+    "standard": "Consumer Awareness Directives",
+    "source": "BIS Care App Portal",
+    "clause": "Citizen Charter",
+    "keywords": ["verify", "bis care", "fake", "check license", "cml number", "verify hallmark"]
+  },
+  {
+    "id": "BIS-008",
+    "question": "What is the validity period and renewal process of a BIS license?",
+    "answer": "A BIS license is initially granted for a period of not less than one year and up to two years. It can be renewed for up to five years upon application, submission of production returns, and payment of the required marking fee. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/Conformity-Assessment-Regulation-2018.pdf",
+    "standard": "Conformity Assessment Regulations",
+    "source": "BIS Guidelines on License Renewal",
+    "clause": "Regulation 8",
+    "keywords": ["validity", "renewal", "expiry", "renew license", "duration", "marking fee"]
+  },
+  {
+    "id": "BIS-009",
+    "question": "What is the BIS Simplified Procedure for granting a license?",
+    "answer": "Under the Simplified Procedure for domestic manufacturers, an applicant submits test reports from a BIS-approved lab alongside the application. BIS conducts the factory visit post-grant or fast-tracks approval within roughly 30 days. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "Scheme-I Operational Manual",
+    "source": "Ease of Doing Business Reforms",
+    "clause": "Section 5.3",
+    "keywords": ["simplified procedure", "fast track", "speedy grant", "30 days"]
+  },
+  {
+    "id": "BIS-010",
+    "question": "What penalties exist for misuse of the BIS Standard Mark?",
+    "answer": "Unauthorized use of the BIS Standard Mark or counterfeiting is punishable under the BIS Act 2016 with imprisonment of up to two years, or a fine of not less than ₹2,00,000 extending up to ten times the value of goods. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "Enforcement and Penalties Provision",
+    "clause": "Section 29",
+    "keywords": ["penalty", "fine", "jail", "misuse", "counterfeit", "punishment", "illegal"]
+  }
+]

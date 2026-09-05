@@ -8,8 +8,7 @@
 /* =========================================================
    CONFIGURATION
    ========================================================= */
-
-const API_ENDPOINT = "http://localhost:3000/api/chat";
+const API_ENDPOINT = "/api/chat";
 
 const LANGUAGE_CODES = {
   en: "en-IN",
@@ -987,12 +986,27 @@ function renderMessage(message) {
     bubble.appendChild(image);
   }
 
-  if (message.content) {
+ if (message.content) {
     const text = document.createElement("div");
+    text.className = "message-content";
 
-    text.textContent = message.content;
+    if (window.marked && message.role === "ai") {
+      text.innerHTML = marked.parse(message.content);
+    } else {
+      text.innerHTML = message.content
+        .replace(/\n/g, "<br>")
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    }
 
     bubble.appendChild(text);
+
+    if (message.references) {
+      const refBadge = document.createElement("div");
+      refBadge.style.cssText =
+        "margin-top: 10px; padding: 6px 10px; background: rgba(23,63,115,0.08); border-radius: 6px; font-size: 11px; border-left: 3px solid #173f73;";
+      refBadge.innerHTML = `<strong>Source:</strong> ${message.references.source} | <strong>Standard:</strong> ${message.references.standard} (${message.references.clause})`;
+      bubble.appendChild(refBadge);
+    }
   }
 
   body.appendChild(bubble);
@@ -1140,7 +1154,7 @@ async function sendCurrentMessage() {
   addTemporaryTypingIndicator();
 
   try {
-    const reply = await sendMessageToBackend(
+    const result = await sendMessageToBackend(
       message,
       getCurrentLanguage(),
       imageData
@@ -1151,7 +1165,8 @@ async function sendCurrentMessage() {
     const aiMessage = {
       id: createId(),
       role: "ai",
-      content: reply,
+      content: result.answer,
+      references: result.references,
       image: null,
       createdAt: new Date().toISOString()
     };
@@ -1167,16 +1182,13 @@ async function sendCurrentMessage() {
 
     removeTemporaryTypingIndicator();
 
-    const demoReply = getDemoResponse(
-      message,
-      getCurrentLanguage(),
-      Boolean(imageData)
-    );
+   const demoReply = "Network Error: Could not connect to the BIS AI backend. Please check your connection or ensure the server is running on port 5000.";
 
     const aiMessage = {
       id: createId(),
       role: "ai",
       content: demoReply,
+      references: null,
       image: null,
       createdAt: new Date().toISOString()
     };
@@ -1204,7 +1216,7 @@ async function sendMessageToBackend(
   image
 ) {
   const payload = {
-    message,
+    question: message,
     language: LANGUAGE_CODES[language] || "en-IN",
     image: image || null
   };
@@ -1213,7 +1225,7 @@ async function sendMessageToBackend(
 
   const timeout = setTimeout(() => {
     controller.abort();
-  }, 10000);
+  }, 60000);
 
   try {
     const response = await fetch(API_ENDPOINT, {
@@ -1238,13 +1250,16 @@ async function sendMessageToBackend(
 
     if (
       !data ||
-      typeof data.reply !== "string" ||
-      !data.reply.trim()
+      typeof data.answer !== "string" ||
+      !data.answer.trim()
     ) {
       throw new Error("Invalid backend response.");
     }
 
-    return data.reply.trim();
+    return {
+      answer: data.answer.trim(),
+      references: data.references || null
+    };
   } finally {
     clearTimeout(timeout);
   }
