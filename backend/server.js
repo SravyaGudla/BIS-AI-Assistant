@@ -4,14 +4,18 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-const { GoogleGenAI } = require("@google/genai");
+const Groq = require("groq-sdk");
+const {
+    searchBISKnowledge,
+    getKnowledgeCount
+} = require("./rag");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Initialize Gemini Client
-const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY
+// Initialize Groq Client
+const groq = new Groq({
+    apiKey: process.env.GROQ_API_KEY
 });
 
 app.use(cors());
@@ -31,65 +35,13 @@ app.get("/", (req, res) => {
     }
 });
 
-// Load BIS Knowledge Base (10 Samples)
-const knowledgePath = path.join(__dirname, "bis-knowledge", "standards.json");
-let bisKnowledge = [];
-
-try {
-    if (fs.existsSync(knowledgePath)) {
-        bisKnowledge = JSON.parse(fs.readFileSync(knowledgePath, "utf-8"));
-        console.log(`Loaded ${bisKnowledge.length} BIS knowledge records.`);
-    } else {
-        console.warn("standards.json not found in bis-knowledge/. Proceeding with empty knowledge base.");
-    }
-} catch (err) {
-    console.error("Error reading standards.json:", err);
-}
-
-/**
- * Keyword & token-based retrieval function
- * Scores records based on keyword hits, question text, and answers
- */
-function searchBISKnowledge(query) {
-    if (!query || !bisKnowledge.length) return null;
-
-    const cleanQuery = query.toLowerCase().replace(/[^a-z0-9\s]/g, "");
-    const tokens = cleanQuery.split(/\s+/).filter(t => t.length > 2);
-
-    if (tokens.length === 0) return null;
-
-    const scoredDocs = bisKnowledge.map((doc) => {
-        let score = 0;
-        tokens.forEach((token) => {
-            // High priority: explicit keyword match
-            if (doc.keywords && doc.keywords.some(k => k.toLowerCase().includes(token))) {
-                score += 5;
-            }
-            // Medium priority: match in sample question
-            if (doc.question && doc.question.toLowerCase().includes(token)) {
-                score += 3;
-            }
-            // Low priority: match in answer body
-            if (doc.answer && doc.answer.toLowerCase().includes(token)) {
-                score += 1;
-            }
-        });
-        return { ...doc, score };
-    });
-
-    // Sort descending by score
-    scoredDocs.sort((a, b) => b.score - a.score);
-
-    // Only return if relevance threshold is met (score >= 3)
-    return scoredDocs[0].score >= 3 ? scoredDocs[0] : null;
-}
 
 // Health check
 app.get("/api/health", (req, res) => {
     res.json({
         status: "ok",
         message: "BIS AI Assistant backend is running",
-        knowledgeRecordsLoaded: bisKnowledge.length
+        knowledgeRecordsLoaded: getKnowledgeCount()
     });
 });
 
@@ -166,37 +118,62 @@ Rules:
             }
         }
 
-        // Step 2: Call Gemini API using gemini-3.6-flash
-        const response = await ai.models.generateContent({
-            model: "gemini-3.6-flash",
-            contents: [
+     // Step 2: Call Groq API with retry handling
+let answerText = "";
+const maxAttempts = 3;
+
+for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+        const completion = await groq.chat.completions.create({
+            model: "openai/gpt-oss-20b",
+
+            messages: [
+                {
+                    role: "system",
+                    content: systemPrompt
+                },
                 {
                     role: "user",
-                    parts: parts
+                    content: `${contextBlock}
+
+USER QUESTION:
+${userQuestion}`
                 }
             ],
-            config: {
-                temperature: 0.2
-            }
+
+            temperature: 0.2
         });
 
-        // Safe text extraction: handles both direct text and candidate blocks
-        let answerText = "";
-        if (response && response.text) {
-            answerText = response.text;
-        } else if (
-            response &&
-            response.candidates &&
-            response.candidates[0] &&
-            response.candidates[0].content &&
-            response.candidates[0].content.parts
-        ) {
-            answerText = response.candidates[0].content.parts.map(p => p.text).join("\n");
-        }
+        answerText =
+            completion.choices[0]?.message?.content || "";
 
-        if (!answerText.trim()) {
-            answerText = "I could not find specific requirements for this query. Please check official standards on the BIS portal (manakonline.in).";
+        // Success - stop retrying
+        break;
+
+    } catch (error) {
+        const statusCode =
+            error?.status ||
+            error?.statusCode ||
+            error?.code;
+
+        if (Number(statusCode) === 429 && attempt < maxAttempts) {
+            const waitTime = attempt * 2000;
+
+            console.log(
+                `Groq rate limit reached. Retrying in ${waitTime / 1000} seconds...`
+            );
+
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+        } else {
+            throw error;
         }
+    }
+}
+
+if (!answerText.trim()) {
+    answerText =
+        "I could not find specific requirements for this query. Please check official standards on the BIS portal.";
+}
 
         // Step 3: Return answer and references to the frontend
         res.json({
@@ -205,7 +182,7 @@ Rules:
         });
 
     } catch (error) {
-        console.error("Gemini server error:", error);
+        console.error("Groq server error:", error);
 
         // Send HTTP 200 with fallback text to prevent frontend from triggering [DEMO RESPONSE]
         res.json({

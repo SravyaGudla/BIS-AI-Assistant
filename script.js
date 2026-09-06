@@ -291,7 +291,8 @@ let state = {
   selectedImageName: "",
   cameraStream: null,
   recognition: null,
-  isListening: false
+  isListening: false,
+  isSending: false
 };
 
 const STORAGE_KEYS = {
@@ -1023,10 +1024,10 @@ function renderMessage(message) {
     );
 
     const speakButton = createMessageAction(
-      "Read aloud",
-      "🔊",
-      () => speakText(message.content)
-    );
+  "Read aloud",
+  "🔊",
+  () => toggleSpeech(message.content, speakButton)
+);
 
     const regenerateButton = createMessageAction(
       "Regenerate",
@@ -1120,6 +1121,11 @@ function removeTemporaryTypingIndicator() {
    ========================================================= */
 
 async function sendCurrentMessage() {
+  if (state.isSending) {
+  return;
+}
+
+state.isSending = true;
   const message = elements.messageInput.value.trim();
 
   if (!message && !state.selectedImage) {
@@ -1203,7 +1209,9 @@ async function sendCurrentMessage() {
     showToast(
       "Backend unavailable — showing clearly marked demo response."
     );
-  }
+  }finally { 
+  state.isSending = false; 
+}
 }
 
 /* =========================================================
@@ -1769,23 +1777,47 @@ function startVoiceRecognition() {
   };
 
   recognition.onerror = (event) => {
-    console.error(
-      "Speech recognition error:",
-      event.error
+
+  console.error(
+    "Speech recognition error:",
+    event.error
+  );
+
+  if (event.error === "not-allowed") {
+
+    showToast(
+      "Microphone permission was denied. Please allow microphone access."
     );
 
-    if (event.error === "not-allowed") {
-      showToast(
-        "Microphone permission was denied."
-      );
-    } else if (event.error === "no-speech") {
-      showToast("No speech was detected.");
-    } else {
-      showToast(
-        "Voice input could not be completed."
-      );
-    }
-  };
+  } else if (event.error === "no-speech") {
+
+    showToast(
+      "No speech was detected. Please try again."
+    );
+
+  } else if (event.error === "audio-capture") {
+
+    showToast(
+      "No microphone was detected."
+    );
+
+  } else if (event.error === "network") {
+
+    showToast(
+      "Voice recognition requires an internet connection."
+    );
+
+  } else if (event.error === "aborted") {
+
+    // User stopped voice input — no error message
+
+  } else {
+
+    showToast(
+      "Voice input could not be completed. Please try again."
+    );
+  }
+};
 
   recognition.onend = () => {
     resetVoiceUI();
@@ -1838,40 +1870,79 @@ function resetVoiceUI() {
    VOICE OUTPUT
    ========================================================= */
 
-function speakText(text) {
+let activeSpeechButton = null;
+
+function toggleSpeech(text, button) {
+
   if (!("speechSynthesis" in window)) {
-    showToast(
-      "Voice output is not supported in this browser."
-    );
-
+    showToast("Voice output is not supported in this browser.");
     return;
   }
 
-  if (
-    !elements.voiceOutputToggle.checked
-  ) {
-    showToast(
-      "Voice output is disabled in Settings."
-    );
-
+  if (!elements.voiceOutputToggle.checked) {
+    showToast("Voice output is disabled in Settings.");
     return;
   }
 
-  window.speechSynthesis.cancel();
+  // If already speaking, stop immediately
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
 
-  const utterance =
-    new SpeechSynthesisUtterance(text);
+    if (activeSpeechButton) {
+      activeSpeechButton.textContent = "🔊";
+      activeSpeechButton.title = "Read aloud";
+    }
+
+    activeSpeechButton = null;
+    return;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(text);
 
   utterance.lang =
-    LANGUAGE_CODES[getCurrentLanguage()] ||
-    "en-IN";
+    LANGUAGE_CODES[getCurrentLanguage()] || "en-IN";
 
-  utterance.rate = 0.95;
+  // Natural speaking speed
+  utterance.rate = 0.9;
   utterance.pitch = 1;
 
-  window.speechSynthesis.speak(
-    utterance
+  // Try to select a good available voice
+  const voices = window.speechSynthesis.getVoices();
+
+  const languageCode = utterance.lang.split("-")[0];
+
+  const preferredVoice = voices.find((voice) =>
+    voice.lang.toLowerCase().startsWith(languageCode) &&
+    (
+      voice.name.includes("Google") ||
+      voice.name.includes("Microsoft")
+    )
   );
+
+  if (preferredVoice) {
+    utterance.voice = preferredVoice;
+  }
+
+  activeSpeechButton = button;
+
+  button.textContent = "■";
+  button.title = "Stop speaking";
+
+  utterance.onend = () => {
+    if (activeSpeechButton === button) {
+      button.textContent = "🔊";
+      button.title = "Read aloud";
+      activeSpeechButton = null;
+    }
+  };
+
+  utterance.onerror = () => {
+    button.textContent = "🔊";
+    button.title = "Read aloud";
+    activeSpeechButton = null;
+  };
+
+  window.speechSynthesis.speak(utterance);
 }
 
 function stopSpeech() {
