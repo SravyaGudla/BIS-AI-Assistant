@@ -1,92 +1,1298 @@
 [
   {
     "id": "BIS-001",
-    "question": "What is BIS certification and its primary objective?",
-    "answer": "BIS certification is a third-party conformity assessment scheme implemented by the Bureau of Indian Standards that provides third-party assurance of quality, safety, and reliability of products to the customer. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/BIS-Act-2016.pdf",
+    "question": "What is BIS certification and what is its primary objective?",
+    "answer": "BIS certification is a conformity assessment system operated by the Bureau of Indian Standards to provide assurance that products meet applicable Indian Standards for quality, safety, and reliability. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
     "standard": "BIS Act 2016",
-    "source": "BIS Official Portal - Scheme-I (ISI Mark)",
-    "clause": "Section 13",
-    "keywords": ["certification", "bis", "objective", "what is bis", "isi mark", "overview"]
+    "source": "BIS Official Portal - Conformity Assessment",
+    "clause": "Conformity Assessment",
+    "keywords": [
+      "bis certification",
+      "what is bis",
+      "objective",
+      "purpose",
+      "quality",
+      "safety",
+      "reliability"
+    ]
   },
   {
     "id": "BIS-002",
-    "question": "How can a manufacturer obtain a BIS license under Scheme-I?",
-    "answer": "Manufacturers apply online via Manakonline, submit manufacturing and testing infrastructure details, pay application fees, undergo a factory audit by BIS officers, pass sample testing in an approved lab, and receive the license once compliance is verified. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/Conformity-Assessment-Regulation-2018.pdf",
-    "standard": "IS/ISO 9001 aligned Scheme-I",
-    "source": "BIS Conformity Assessment Regulations 2018",
-    "clause": "Regulation 4",
-    "keywords": ["get bis", "obtain license", "apply", "scheme-i", "process", "factory audit"]
+    "question": "How can a manufacturer obtain a BIS licence under Scheme-I?",
+    "answer": "A manufacturer applies through the prescribed BIS system, provides required manufacturing and testing information, undergoes assessment as applicable, and receives a licence after BIS verifies compliance with the relevant Indian Standard and scheme requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations 2018",
+    "source": "BIS Official Portal - Scheme-I",
+    "clause": "Scheme-I Certification",
+    "keywords": [
+      "get bis licence",
+      "obtain licence",
+      "apply",
+      "scheme-i",
+      "manufacturer",
+      "certificationprocess"
+    ]
   },
   {
     "id": "BIS-003",
     "question": "What is the Compulsory Registration Scheme (CRS)?",
-    "answer": "CRS is a simplified regulatory compliance scheme specifically for electronic and IT goods under Order issued by MeitY. Products must be tested in BIS-recognized labs, followed by online registration without a prior factory inspection. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
-    "standard": "Scheme-II (CRS)",
-    "source": "Electronics and IT Goods (Requirement for Compulsory Registration) Order",
-    "clause": "Schedule II",
-    "keywords": ["crs", "compulsory registration scheme", "electronics", "meity", "it goods"]
+    "answer": "The Compulsory Registration Scheme is a BIS conformity assessment scheme for specified electronic and IT products. Covered products must meet the applicable requirements and complete BIS registrationbefore being placed on the Indianmarket. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
+    "standard": "BIS Compulsory Registration Scheme",
+    "source": "BIS Official Portal - CRS",
+    "clause": "Scheme-II",
+    "keywords": [
+      "crs",
+      "compulsory registration scheme",
+      "electronics",
+      "it goods",
+      "registration",
+      "meity"
+    ]
   },
   {
     "id": "BIS-004",
-    "question": "What is the Hallmarking scheme for gold and silver?",
-    "answer": "Hallmarking provides third-party certification of the purity and fineness of precious metals. For gold, it consists of three marks: the BIS logo, purity/fineness grade (e.g., 22K916), and a 6-digit alphanumeric HUID (Hallmark Unique Identification). PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/brief-on-Hallmarking.pdf",
-    "standard": "IS 1417 / IS 2112",
-    "source": "BIS Hallmarking Regulations",
-    "clause": "Section 14 & 15",
-    "keywords": ["hallmark", "gold", "silver", "huid", "purity", "jewellery"]
+    "question": "What is BIS hallmarking?",
+    "answer": "BIS hallmarking is a conformity assessment system for precious metal articles that provides assurance regarding their declared purity or fineness according to applicable BIS requirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2021/07/Hallmarking_Guidelines.pdf",
+    "standard": "BIS Hallmarking Regulations",
+    "source": "BIS Official Portal - Hallmarking",
+    "clause": "Hallmarking of Precious Metal Articles",
+    "keywords": [
+      "hallmarking",
+      "gold",
+      "silver",
+      "jewellery",
+      "purity",
+      "fineness",
+      "huid"
+    ]
   },
   {
     "id": "BIS-005",
     "question": "What is the Foreign Manufacturers Certification Scheme (FMCS)?",
-    "answer": "FMCS grants a license to overseas manufacturing units enabling them to use the standard mark (ISI) on products exported to India. The audit requires an on-site inspection by BIS officials at the overseas factory. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/FMCS_Guidelines.pdf",
-    "standard": "FMCS Scheme-I",
-    "source": "BIS Guidelines for Foreign Manufacturers",
-    "clause": "Clause 3.2",
-    "keywords": ["fmcs", "foreign manufacturer", "import", "overseas", "export to india"]
+    "answer": "The Foreign Manufacturers Certification Scheme enables eligible overseas manufacturers to obtain BIS certificationfor applicable products and use the BIS Standard Markin accordance with the conditions of their licence. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Foreign Manufacturers Certification Scheme",
+    "source": "BIS Official Portal - FMCS",
+    "clause": "Foreign Manufacturers Certification",
+    "keywords": [
+      "fmcs",
+      "foreign manufacturer",
+      "overseas manufacturer",
+      "import",
+      "export to india",
+      "foreign certification"
+    ]
   },
   {
     "id": "BIS-006",
-    "question": "What is the difference between voluntary and mandatory BIS standards?",
-    "answer": "While BIS certification is generally voluntary, the Government of India issues Quality Control Orders (QCOs) making certification mandatory for specific goods related to public interest, safety, environment, or human health. PDF Link: https://www.bis.gov.in/wp-content/uploads/2021/11/Guidance-Document-on-QCOs.pdf",
+    "question": "What is the difference between voluntary and mandatory BIS certification?",
+    "answer": "BIS certification is generally voluntary unless the government makes compliance compulsory for specified products through Quality Control Orders or other applicable legal requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
     "standard": "BIS Act 2016",
-    "source": "Quality Control Orders (QCO) Repository",
-    "clause": "Section 16",
-    "keywords": ["voluntary", "mandatory", "qco", "quality control order", "compulsory"]
+    "source": "BIS Official Portal",
+    "clause": "Compulsory Conformity Assessment",
+    "keywords": [
+      "voluntary",
+      "mandatory",
+      "qco",
+      "quality control order",
+      "compulsory certification"
+    ]
   },
   {
     "id": "BIS-007",
-    "question": "How can consumers verify a BIS ISI mark or Hallmark?",
-    "answer": "Consumers can verify marks using the 'BIS Care' mobile application by entering the CM/L (Certification/License) number or scanning the HUID code directly to check manufacturer validity and product details. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Care-App.pdf",
-    "standard": "Consumer Awareness Directives",
-    "source": "BIS Care App Portal",
-    "clause": "Citizen Charter",
-    "keywords": ["verify", "bis care", "fake", "check license", "cml number", "verify hallmark"]
+    "question": "How can consumers verify a BIS-certified product or hallmark?",
+    "answer": "Consumers can use official BIS verification services, including the BIS Care application where applicable, to check licence, registration, certification, or hallmark details. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Consumer Awareness",
+    "source": "BIS Official Portal - BIS Care",
+    "clause": "Consumer Verification",
+    "keywords": [
+      "verify bis",
+      "bis care",
+      "check licence",
+      "check registration",
+      "verify hallmark",
+      "genuine product"
+    ]
   },
   {
     "id": "BIS-008",
-    "question": "What is the validity period and renewal process of a BIS license?",
-    "answer": "A BIS license is initially granted for a period of not less than one year and up to two years. It can be renewed for up to five years upon application, submission of production returns, and payment of the required marking fee. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/Conformity-Assessment-Regulation-2018.pdf",
-    "standard": "Conformity Assessment Regulations",
-    "source": "BIS Guidelines on License Renewal",
-    "clause": "Regulation 8",
-    "keywords": ["validity", "renewal", "expiry", "renew license", "duration", "marking fee"]
+    "question": "How long is a BIS licence valid and how can it be renewed?",
+    "answer": "The validity and renewal period of a BIS licence depend on the applicable conformity assessment scheme and licence conditions. Renewal generally requires an application and continued compliance with applicable requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations 2018",
+    "source": "BIS Official Portal",
+    "clause": "Grant and Renewal of Licence",
+    "keywords": [
+      "validity",
+      "renewal",
+      "expiry",
+      "renew licence",
+      "licence duration"
+    ]
   },
   {
     "id": "BIS-009",
-    "question": "What is the BIS Simplified Procedure for granting a license?",
-    "answer": "Under the Simplified Procedure for domestic manufacturers, an applicant submits test reports from a BIS-approved lab alongside the application. BIS conducts the factory visit post-grant or fast-tracks approval within roughly 30 days. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
-    "standard": "Scheme-I Operational Manual",
-    "source": "Ease of Doing Business Reforms",
-    "clause": "Section 5.3",
-    "keywords": ["simplified procedure", "fast track", "speedy grant", "30 days"]
+    "question": "What is the BIS Simplified Procedure for granting a licence?",
+    "answer": "The BIS Simplified Procedure is an alternative certification process available in applicable cases that may use specified test reports and documents to facilitate faster processing, subject to verification and other requirements prescribed by BIS. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Scheme-I Procedures",
+    "source": "BIS Official Portal",
+    "clause": "Simplified Procedure",
+    "keywords": [
+      "simplified procedure",
+      "fast track",
+      "faster licence",
+      "test reports",
+      "scheme-i"
+    ]
   },
   {
     "id": "BIS-010",
-    "question": "What penalties exist for misuse of the BIS Standard Mark?",
-    "answer": "Unauthorized use of the BIS Standard Mark or counterfeiting is punishable under the BIS Act 2016 with imprisonment of up to two years, or a fine of not less than ₹2,00,000 extending up to ten times the value of goods. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/05/BIS-Act-2016.pdf",
+    "question": "What can happen if the BIS Standard Mark is misused?",
+    "answer": "Unauthorized use or misuse of the BIS Standard Mark may result inenforcement action and penalties under the BIS Act 2016 and other applicable legal provisions. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
     "standard": "BIS Act 2016",
-    "source": "Enforcement and Penalties Provision",
-    "clause": "Section 29",
-    "keywords": ["penalty", "fine", "jail", "misuse", "counterfeit", "punishment", "illegal"]
+    "source": "BIS Official Portal",
+    "clause": "Offences and Penalties",
+    "keywords": [
+      "penalty",
+      "misuse",
+      "fake isi",
+      "counterfeit mark",
+      "unauthorized use",
+      "punishment"
+    ]
+  },
+  {
+    "id": "BIS-011",
+    "question": "What are the main functions of BIS?",
+    "answer": "The main functions of BIS include developing Indian Standards, operating conformity assessment schemes, implementing hallmarking, recognizing laboratories, promoting qualityawareness, and protecting consumer interests. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Functions of BIS",
+    "keywords": [
+      "functions",
+      "role",
+      "bis activities",
+      "responsibilities",
+      "what does bis do"
+    ]
+  },
+  {
+    "id": "BIS-012",
+    "question": "What is an Indian Standard?",
+    "answer": "An Indian Standard is a technical document developed through the BIS standardization process that specifies requirements, guidelines, characteristics, or methods for products, processes, or services. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Standardization Framework",
+    "source": "BIS Official Portal - Standards",
+    "clause": "Indian Standards",
+    "keywords": [
+      "indian standard",
+      "is standard",
+      "technical requirements",
+      "standards",
+      "what is anis"
+    ]
+  },
+  {
+    "id": "BIS-013",
+    "question": "What is conformity assessment?",
+    "answer": "Conformityassessment is the process used to determine whether a product, process, system, or service meets specified requirements or applicable standards. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Conformity Assessment",
+    "keywords": [
+      "conformity assessment",
+      "compliance",
+      "requirements",
+      "assessment",
+      "evaluation"
+    ]
+  },
+  {
+    "id": "BIS-014",
+    "question": "What does the BIS Standard Mark indicate?",
+    "answer": "The BIS Standard Mark indicates that a product covered under the applicable BIS certification scheme conforms to the relevant Indian Standard, subject to the conditions of the applicable licence or registration. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment",
+    "source": "BIS Official Portal",
+    "clause": "Use of Standard Mark",
+    "keywords": [
+      "bis mark",
+      "standard mark",
+      "isi mark",
+      "meaning of bis mark",
+      "certificationmark"
+    ]
+  },
+  {
+    "id": "BIS-015",
+    "question": "What happens if a certified product does not meet BIS requirements?",
+    "answer": "If a certified product is found to be non-conforming, BIS may require corrective action or take other appropriate action, including suspension or cancellation of certification, according to the applicable scheme and regulations. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations 2018",
+    "source": "BIS Official Portal",
+    "clause": "Non-Conformity and Enforcement",
+    "keywords": [
+      "non conforming product",
+      "fails bis",
+      "non compliance",
+      "suspension",
+      "cancellation",
+      "corrective action"
+    ]
+  },
+  {
+    "id": "BIS-016",
+    "question": "I want to start a manufacturing company. How do I know whether I need BIS certification?",
+    "answer": "First identify the exact product you plan to manufacture and check whether it is covered by an applicable Indian Standard, Quality Control Order, compulsory certification requirement, or BIS registration scheme. If certification is mandatory for that product, you must complete the applicable BIS conformity assessment process before manufacturing or selling it as required by law. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Product Certification Requirements",
+    "keywords": [
+      "start company",
+      "start manufacturing",
+      "need bis",
+      "business requirements",
+      "manufacturer",
+      "new company"
+    ]
+  },
+  {
+    "id": "BIS-017",
+    "question": "I want to manufacture aproduct. What should I do before applying for BIS certification?",
+    "answer": "Identify the applicable Indian Standard for the product, determine whether certification is mandatory, understand the relevant BIS scheme, establishthe required manufacturing and quality-control arrangements, and prepare the documents and testing requirements specified for the applicable certification process. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Application Preparation",
+    "keywords": [
+      "before applying",
+      "manufacture product",
+      "prepare for bis",
+      "requirements",
+      "new manufacturer"
+    ]
+  },
+  {
+    "id": "BIS-018",
+    "question": "What documents may a newmanufacturer need for BIS certification?",
+    "answer": "The required documents depend onthe applicable BIS scheme and product. Theymay include applicationdetails, manufacturing information, quality-control arrangements, testing information, product details, and other documents required under the relevant certification scheme. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Application Documents",
+    "keywords": [
+      "documents",
+      "required documents",
+      "manufacturer documents",
+      "bis application",
+      "paperwork"
+    ]
+  },
+  {
+    "id": "BIS-019",
+    "question": "What is the general process for obtaining BIS certification for a new product?",
+    "answer": "The general process is to identify the applicable Indian Standard and certification scheme, submit the required application and information, complete required testing or assessment, undergo inspection where applicable, demonstrate compliance, and receive the relevant BIS licence or registration if all requirements are satisfied. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Certification Process",
+    "keywords": [
+      "process",
+      "steps",
+      "get bis certificate",
+      "new product",
+      "certificationprocedure"
+    ]
+  },
+  {
+    "id": "BIS-020",
+    "question": "Do I need BIS certificationbefore I start selling my product?",
+    "answer": "It depends onthe product and applicable legal requirements. If the product is covered under mandatory BIS certification, registration, or another compulsoryconformity assessment requirement, the required approval must be obtained before the product is placed on the market as required bythe applicable rules. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Certification",
+    "keywords": [
+      "before selling",
+      "sell product",
+      "mandatory bis",
+      "approval before sale",
+      "market product"
+    ]
+  },
+  {
+    "id": "BIS-021",
+    "question": "I want to start anelectronics company. Do I need BIS registration?",
+    "answer": "Some electronic and IT products are covered under the BIS Compulsory Registration Scheme. You must first identify the exact product and check whether it is included under the applicable compulsory registration requirements. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
+    "standard": "BIS Compulsory Registration Scheme",
+    "source": "BIS Official Portal - CRS",
+    "clause": "Scheme-II Registration",
+    "keywords": [
+      "electronics company",
+      "electronic product",
+      "crs",
+      "electronics registration",
+      "meity"
+    ]
+  },
+  {
+    "id": "BIS-022",
+    "question": "I want to start acompany that imports products into India. Do I need BIS approval?",
+    "answer": "The requirement depends on the specific imported product. If the product is covered under mandatory BIS certification or registration requirements, the applicable BIS conformity requirements must be satisfied before the product is placed on the Indianmarket. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Imported Products",
+    "keywords": [
+      "import company",
+      "import products",
+      "foreign product",
+      "import india",
+      "bis approval"
+    ]
+  },
+  {
+    "id": "BIS-023",
+    "question": "I want to manufacture electrical products. Howdo I find the BIS requirements?",
+    "answer": "Identify the exact electrical product and check the applicable Indian Standard and compulsory certification requirements. BIS requirements can differ depending on the product category, design, intended use, and applicable Quality Control Orders or certification schemes. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "Indian Standards and Conformity Assessment",
+    "source": "BIS Official Portal",
+    "clause": "Applicable Product Standards",
+    "keywords": [
+      "electrical products",
+      "electrical company",
+      "find bis requirements",
+      "electrical certification",
+      "product standard"
+    ]
+  },
+  {
+    "id": "BIS-024",
+    "question": "What happens if my company sells a product that requires BIS certification without obtaining it?",
+    "answer": "If a product is subject to mandatory BIS requirements, manufacturing, importing, selling, or distributing it without the required conformity approval may lead to enforcement action under the applicable laws, orders, and regulations. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Compliance and Enforcement",
+    "keywords": [
+      "sell without bis",
+      "no certification",
+      "violation",
+      "illegal product",
+      "enforcement"
+    ]
+  },
+  {
+    "id": "BIS-025",
+    "question": "After getting BIS certification, what responsibilities does a manufacturer have?",
+    "answer": "A certified manufacturer must continue to complywith the applicable Indian Standard and certification conditions, maintainrequired quality-control arrangements, use the BIS Standard Mark only as authorized, and cooperate with applicable BIS surveillance and compliance activities. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Licence Conditions and Surveillance",
+    "keywords": [
+      "after certification",
+      "manufacturer responsibilities",
+      "maintain compliance",
+      "surveillance",
+      "quality control"
+    ]
+  },
+  {
+    "id": "BIS-026",
+    "question": "Can a newstartup apply for BIS certification?",
+    "answer": "Yes. Eligibility depends on the applicable BIS scheme and product requirements rather thanwhether the business is a startup or an established company. The applicant must meet the relevant technical, manufacturing, testing, and conformityrequirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Eligibility for Certification",
+    "keywords": [
+      "startup",
+      "new business",
+      "new company",
+      "apply bis",
+      "eligibility"
+    ]
+  },
+  {
+    "id": "BIS-027",
+    "question": "How do I know which Indian Standard applies to my product?",
+    "answer": "You should identify the exact product and its intended use, technical characteristics, and category, then search the relevant BIS standards information or obtain appropriate technical guidance to determine the applicable Indian Standard. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Standardization Framework",
+    "source": "BIS Official Portal - Standards",
+    "clause": "Identificationof Applicable Standard",
+    "keywords": [
+      "which standard",
+      "find indian standard",
+      "product standard",
+      "is number",
+      "applicable standard"
+    ]
+  },
+  {
+    "id": "BIS-028",
+    "question": "Do all companies need the same BIS certification process?",
+    "answer": "No. The applicable BIS process depends on the product, the relevant Indian Standard, whether certification is voluntary or mandatory, and the conformity assessment scheme that applies to that product. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Applicable Certification Schemes",
+    "keywords": [
+      "same process",
+      "different companies",
+      "different certification",
+      "bis schemes",
+      "product requirements"
+    ]
+  },
+  {
+    "id": "BIS-029",
+    "question": "Can my company use the BIS Standard Mark immediatelyafter submitting an application?",
+    "answer": "No. The BIS Standard Mark may be used only when the applicant has received the required authorization under the applicable BIS licence, certificate, or registration scheme and follows the prescribed conditions for its use. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Use of Standard Mark",
+    "keywords": [
+      "use bis mark",
+      "after application",
+      "authorization",
+      "isi mark",
+      "standard mark"
+    ]
+  },
+  {
+    "id": "BIS-030",
+    "question": "What should I do if I amnot sure whether myproduct requires BIS certification?",
+    "answer": "Identify the exact product and check the applicable Indian Standard, Quality Control Orders, compulsory certification lists, and relevant BIS conformity assessment schemes. If necessary, seek clarification from the appropriate official BIS source before placing the product onthe market. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Determining Certification Requirements",
+    "keywords": [
+      "not sure",
+      "need bis",
+      "check requirement",
+      "product certification",
+      "mandatory requirement"
+    ]
+  },
+  {
+    "id": "BIS-031",
+    "question": "I want to start acompany. What BIS requirements do I need to follow?",
+    "answer": "The BIS requirements depend on the exact product your company will manufacture, import, or sell. First identify the product, check the applicable Indian Standard and determine whether it is covered bya mandatory BIS certificationscheme, Compulsory Registration Scheme, Quality Control Order, or other applicable requirement. If BIS compliance is mandatory, complete the required conformity assessment before placing the product onthe market. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Product Certification Requirements",
+    "keywords": [
+      "start company",
+      "new company",
+      "business",
+      "bis requirements",
+      "manufacturer",
+      "startup"
+    ]
+  },
+  {
+    "id": "BIS-032",
+    "question": "I want to manufacture aproduct. How do I knowwhether BIS certification is required?",
+    "answer": "Identify the exact product and check whether it is covered byan applicable Indian Standard, Quality Control Order, compulsory certificationrequirement, or BIS registration scheme. BIS certification is mandatory only for specified products covered by applicable legal or regulatory requirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Determining Certification Requirements",
+    "keywords": [
+      "manufacture product",
+      "need bis",
+      "mandatory certification",
+      "check requirements",
+      "qco",
+      "indian standard"
+    ]
+  },
+  {
+    "id": "BIS-033",
+    "question": "What documents do I need to get BIS certification?",
+    "answer": "The required documents depend onthe product and the applicable BIS scheme. Generally, an applicant may need application details, product information, manufacturing details, quality-control arrangements, testinginformation, and other documents required under the relevant certificationscheme. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Application Requirements",
+    "keywords": [
+      "documents",
+      "required documents",
+      "bis application",
+      "certificate documents",
+      "manufacturer paperwork"
+    ]
+  },
+  {
+    "id": "BIS-034",
+    "question": "Can I sell my product while my BIS application is under process?",
+    "answer": "It depends onwhether BIS compliance is mandatory for the product. Ifthe product is covered by a compulsory BIS certification or registration requirement, it generally cannot be placed on the market without the required approval. Ifcertification is voluntary, different conditions may apply. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Certification Compliance",
+    "keywords": [
+      "sell during application",
+      "applicationpending",
+      "before approval",
+      "market product",
+      "mandatory bis"
+    ]
+  },
+  {
+    "id": "BIS-035",
+    "question": "I am importing products into India. Do I need BIS approval?",
+    "answer": "The requirement depends on the specific product being imported. If the product is covered under mandatory BIS certification or registration requirements, the applicable BIS conformity requirements must be satisfied before the product is placed on the Indianmarket. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Imported Products",
+    "keywords": [
+      "import",
+      "import products",
+      "foreign products",
+      "india",
+      "bis approval",
+      "importer"
+    ]
+  },
+  {
+    "id": "BIS-036",
+    "question": "My product passed laboratory testing. Does that mean it is automatically BIS-certified?",
+    "answer": "No. Passing a laboratory test alone does not automatically grant BIS certification. Depending on the applicable scheme, BIS may also require an application, document review, assessment of manufacturing and quality-control arrangements, inspection, or other conformity assessment activities before granting certificationor registration. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations 2018",
+    "source": "BIS Official Portal",
+    "clause": "Conformity Assessment Process",
+    "keywords": [
+      "lab test",
+      "passed test",
+      "automatic certification",
+      "testing",
+      "bis certified",
+      "inspection"
+    ]
+  },
+  {
+    "id": "BIS-037",
+    "question": "I changed my product designafter certification. What should I do?",
+    "answer": "You should check whether the design change affects compliance withthe applicable Indian Standard or the conditions of your BIS licence. Significant changes may require evaluation, testing, approval, or other action under the applicable certification scheme before the modified product continues to use the BIS Standard Mark. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Changes Affecting Certified Products",
+    "keywords": [
+      "change design",
+      "product modification",
+      "after certification",
+      "update product",
+      "design change"
+    ]
+  },
+  {
+    "id": "BIS-038",
+    "question": "I found a product with a fake ISI mark. How can I report it?",
+    "answer": "You should report suspected misuse or counterfeit use of the BIS Standard Mark through the appropriate official BIS complaint or enforcement channel. Providingavailable details such as the product, manufacturer, seller, location, and photographs can help the authorities examine the complaint. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal - Consumer Affairs",
+    "clause": "Misuse of Standard Mark",
+    "keywords": [
+      "fake isi",
+      "report fake mark",
+      "counterfeit",
+      "complaint",
+      "fake bis",
+      "report violation"
+    ]
+  },
+  {
+    "id": "BIS-039",
+    "question": "My BIS licence is expiring. How do I renew it?",
+    "answer": "Apply for renewal through the applicable BIS process before the licence expires and ensure that the required information, fees, and compliance conditions are satisfied. The exact renewal procedure and validityperiod depend on the applicable BIS conformity assessment scheme. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Renewal of Licence",
+    "keywords": [
+      "licence expiry",
+      "renew bis",
+      "renewal",
+      "expired licence",
+      "validity"
+    ]
+  },
+  {
+    "id": "BIS-040",
+    "question": "What happens if my company does not follow mandatory BIS requirements?",
+    "answer": "Failure to comply with applicable mandatory BIS requirements mayresult in regulatory or enforcement action under the relevant laws, Quality Control Orders, and BIS regulations. Depending on the violation, consequences may include restrictions on manufacturing or sale, suspension or cancellation of authorization, penalties, or other legal action. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Compliance and Enforcement",
+    "keywords": [
+      "non compliance",
+      "mandatory bis",
+      "penalty",
+      "companyviolation",
+      "legal action",
+      "qco"
+    ]
+  },
+  {
+    "id": "BIS-041",
+    "question": "I have a small startup. Can I apply for BIS certification?",
+    "answer": "Yes. A startup can applyfor BIS certification if it meets the eligibility and technical requirements of the applicable BIS conformity assessment scheme. The requirements generally depend on the product and certification scheme rather than the size of the business. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Eligibility for Certification",
+    "keywords": [
+      "startup",
+      "small business",
+      "new business",
+      "apply bis",
+      "eligibility",
+      "small company"
+    ]
+  },
+  {
+    "id": "BIS-042",
+    "question": "I have already established my factory. What is the next step to get BIS certification?",
+    "answer": "Identify the applicable Indian Standard and BIS certificationscheme for your product, ensure that the factory has the required manufacturing and quality-control arrangements, complete required testing, and submit an applicationthrough the applicable BIS process. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Application for Certification",
+    "keywords": [
+      "factory established",
+      "next step",
+      "get bis",
+      "factory certification",
+      "manufacturer application"
+    ]
+  },
+  {
+    "id": "BIS-043",
+    "question": "How long does the BIS certification process usually take?",
+    "answer": "The time required depends onthe product, applicable BIS scheme, completeness of the application, testing requirements, inspections, and whether any non-conformities are identified. Applicants should check the applicable BIS scheme for the current process and requirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Certification Process",
+    "keywords": [
+      "howlong",
+      "time",
+      "processing time",
+      "certificationduration",
+      "bis approval time"
+    ]
+  },
+  {
+    "id": "BIS-044",
+    "question": "Can I start manufacturing before receiving BIS certification?",
+    "answer": "Whether manufacturing canbegin before certification depends on the applicable product requirements and legal conditions. However, if BIS certification is mandatory for placing the product on the market, the required approval must be obtained before selling or supplying the product as required by applicable rules. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Compliance",
+    "keywords": [
+      "start manufacturing",
+      "before certification",
+      "manufacture before bis",
+      "approval",
+      "mandatory product"
+    ]
+  },
+  {
+    "id": "BIS-045",
+    "question": "What should I do if my BIS application is rejected?",
+    "answer": "Review the reason for rejection or non-compliance, correct the identified deficiencies, and follow the applicable BIS procedure for submitting additional information, taking corrective action, or making a fresh application where permitted. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Application Processing",
+    "keywords": [
+      "applicationrejected",
+      "rejection",
+      "failed application",
+      "correct deficiencies",
+      "apply again"
+    ]
+  },
+  {
+    "id": "BIS-046",
+    "question": "How can I find the Indian Standard applicable to myproduct?",
+    "answer": "Identify the exact product, its intended use, technical characteristics, and product category, thencheck the official BIS standards information to determine the relevant Indian Standard. Similar-looking products may be covered by different standards. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Standardization Framework",
+    "source": "BIS Official Portal - Standards",
+    "clause": "Identificationof Applicable Standards",
+    "keywords": [
+      "find indian standard",
+      "applicable standard",
+      "is number",
+      "product standard",
+      "which standard"
+    ]
+  },
+  {
+    "id": "BIS-047",
+    "question": "My product is similar to another certified product. Can I use the same BIS certification?",
+    "answer": "No. A BIS licence or certification is issued accordingto the applicable scheme and authorized conditions. A similar product cannot automatically use another product's certification unless it is specifically covered by the relevant authorization. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Scope of Licence",
+    "keywords": [
+      "similar product",
+      "same certification",
+      "use another licence",
+      "product scope",
+      "bis licence"
+    ]
+  },
+  {
+    "id": "BIS-048",
+    "question": "Can I use the BIS Standard Mark immediatelyafter applying for certification?",
+    "answer": "No. The BIS Standard Mark may be used only after receiving the required authorization under the applicable BIS licence, certificate, or registration scheme and according to the prescribed conditions. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Use of Standard Mark",
+    "keywords": [
+      "use bis mark",
+      "after application",
+      "before approval",
+      "isi mark",
+      "authorization"
+    ]
+  },
+  {
+    "id": "BIS-049",
+    "question": "What happens if my certified product does not meet BIS requirements later?",
+    "answer": "If a certified product is found to be non-conforming, BIS may require corrective action and may take further actionunder the applicable scheme, including suspensionor cancellation of authorization where appropriate. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Non-Conformity and Corrective Action",
+    "keywords": [
+      "non conforming product",
+      "fails requirements",
+      "after certification",
+      "corrective action",
+      "suspension"
+    ]
+  },
+  {
+    "id": "BIS-050",
+    "question": "I want to start anelectronics company. Do my products need BIS registration?",
+    "answer": "Some electronic and IT products are covered under the BIS Compulsory Registration Scheme. You should identify the exact product and check whether it is included inthe applicable compulsory registration requirements. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
+    "standard": "BIS Compulsory Registration Scheme",
+    "source": "BIS Official Portal - CRS",
+    "clause": "Scheme-II Registration",
+    "keywords": [
+      "electronics company",
+      "electronic products",
+      "crs",
+      "bis registration",
+      "it products"
+    ]
+  },
+  {
+    "id": "BIS-051",
+    "question": "I manufacture electrical products. Howdo I find the applicable BIS standards?",
+    "answer": "Identify the exact electrical product, its intended use, and technical characteristics, thencheck the relevant Indian Standards and applicable compulsory certification requirements throughofficial BIS information. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "Indian Standards Framework",
+    "source": "BIS Official Portal",
+    "clause": "Applicable Product Standards",
+    "keywords": [
+      "electrical products",
+      "electrical standards",
+      "find standard",
+      "product requirements",
+      "certification"
+    ]
+  },
+  {
+    "id": "BIS-052",
+    "question": "I want to sell electronic products online in India. Do I need BIS registration?",
+    "answer": "Selling a product online does not remove applicable BIS requirements. If the electronic product is covered under compulsory BIS registrationor certificationrequirements, the required compliance must be completed before it is placed onthe Indian market. PDF Link: https://www.crsbis.in/BIS/app_srv/tdc/gl/docs/Scheme-II.pdf",
+    "standard": "BIS Compulsory Registration Scheme",
+    "source": "BIS Official Portal - CRS",
+    "clause": "Mandatory Registration",
+    "keywords": [
+      "sell online",
+      "ecommerce",
+      "electronic product",
+      "online india",
+      "crs registration"
+    ]
+  },
+  {
+    "id": "BIS-053",
+    "question": "Can an electronic product be sold in India without BIS registration?",
+    "answer": "If the electronic product is covered under the applicable Compulsory Registration Scheme or another mandatory BIS requirement, it cannot be legally placed on the Indian market without meeting the required conformity requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Compulsory Registration Scheme",
+    "source": "BIS Official Portal - CRS",
+    "clause": "Compulsory Registration",
+    "keywords": [
+      "electronic product",
+      "without registration",
+      "sell electronics",
+      "mandatory crs",
+      "india market"
+    ]
+  },
+  {
+    "id": "BIS-054",
+    "question": "I am a foreignmanufacturer. Can I obtain BIS certification to sell products in India?",
+    "answer": "Yes, eligible foreign manufacturers canapply under the applicable BIS certification arrangements, including the Foreign Manufacturers Certification Scheme where relevant. The exact process depends on the product and applicable conformity assessment requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/FMCS_Guidelines.pdf",
+    "standard": "Foreign Manufacturers Certification Scheme",
+    "source": "BIS Official Portal - FMCS",
+    "clause": "Foreign Manufacturer Certification",
+    "keywords": [
+      "foreign manufacturer",
+      "fmcs",
+      "sell in india",
+      "overseas company",
+      "bis foreign"
+    ]
+  },
+  {
+    "id": "BIS-055",
+    "question": "Can an importer use a foreignproduct certificate instead of BIS certification?",
+    "answer": "A foreign certificate does not automatically replace BIS certification when the product is subject to mandatory BIS requirements in India. The product must meet the applicable Indian conformity assessment requirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Imported Product Compliance",
+    "keywords": [
+      "foreign certificate",
+      "importer",
+      "international certificate",
+      "replace bis",
+      "import compliance"
+    ]
+  },
+  {
+    "id": "BIS-056",
+    "question": "My company manufactures products outside India. Which BIS scheme may applyto me?",
+    "answer": "The applicable BIS scheme depends on the product and the type of conformity assessment required. Foreign manufacturers of products covered under applicable BIS requirements should check the relevant foreign manufacturer certification or registration process for that product. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/FMCS_Guidelines.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Foreign Manufacturer Requirements",
+    "keywords": [
+      "manufacture outside india",
+      "foreign company",
+      "which scheme",
+      "fmcs",
+      "overseas manufacturer"
+    ]
+  },
+  {
+    "id": "BIS-057",
+    "question": "I own a shop. How can I checkwhether the products I sell require BIS certification?",
+    "answer": "Identify the exact products you sell and check whether they are covered by applicable mandatory BIS certification, registration requirements, Quality Control Orders, or other compulsory conformity requirements. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Product Compliance Requirements",
+    "keywords": [
+      "shop owner",
+      "retailer",
+      "products sell",
+      "check bis",
+      "mandatory products"
+    ]
+  },
+  {
+    "id": "BIS-058",
+    "question": "Can I sell a product without BIS certification if the manufacturer says it is safe?",
+    "answer": "A manufacturer's statement that a product is safe does not replace mandatory BIS certification or registration. If the product is covered by compulsory BIS requirements, the required conformity approval must be obtained. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Product Compliance",
+    "keywords": [
+      "manufacturer says safe",
+      "without bis",
+      "product safety",
+      "mandatory certification",
+      "seller"
+    ]
+  },
+  {
+    "id": "BIS-059",
+    "question": "Can I advertise myproduct as BIS-certified before receiving approval?",
+    "answer": "No. A product should not be represented as BIS-certified or authorized to use the BIS Standard Mark before the required certification, registration, or authorizationhas been granted. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Use and Representation of Certification",
+    "keywords": [
+      "advertise bis",
+      "before approval",
+      "claimcertified",
+      "marketing",
+      "false claim"
+    ]
+  },
+  {
+    "id": "BIS-060",
+    "question": "What responsibilities does mycompany have after receiving BIS certification?",
+    "answer": "A certified company must continue to meet applicable requirements, maintain required quality-control arrangements, use the BIS Standard Mark only as authorized, comply with licence conditions, and cooperate with applicable BIS surveillance activities. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Conditions of Licence",
+    "keywords": [
+      "after certification",
+      "companyresponsibilities",
+      "maintain compliance",
+      "surveillance",
+      "licence conditions"
+    ]
+  },
+  {
+    "id": "BIS-061",
+    "question": "I bought a defective BIS-marked product. Can I complain to BIS?",
+    "answer": "Yes. If the issue relates to suspected misuse of BIS certification, the BIS Standard Mark, or conformity with applicable requirements, you can use the appropriate official BIS complaint or grievance mechanism. You may also contact the seller or manufacturer regardingthe product defect. PDF Link: https://www.bis.gov.in/wp-content/uploads/2021/01/BIS_Care_App_Manual.pdf",
+    "standard": "BIS Consumer Protection Framework",
+    "source": "BIS Official Portal",
+    "clause": "Consumer Complaints",
+    "keywords": [
+      "defective product",
+      "complain",
+      "consumer complaint",
+      "bis marked product",
+      "faulty product"
+    ]
+  },
+  {
+    "id": "BIS-062",
+    "question": "Does a BIS mark guarantee that a product will never fail?",
+    "answer": "No. A BIS mark indicates conformity with specified requirements under the applicable certification scheme. It does not guarantee that an individual product will never develop afault during its lifetime. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Conformity Assessment",
+    "source": "BIS Official Portal",
+    "clause": "Conformity Assessment",
+    "keywords": [
+      "guarantee",
+      "product failure",
+      "fault",
+      "bis mark guarantee",
+      "defective"
+    ]
+  },
+  {
+    "id": "BIS-063",
+    "question": "Why should I check BIS details before buying certainproducts?",
+    "answer": "Checking BIS details canhelp consumers verify whether products covered by applicable mandatory requirements have the required certificationor registration and are associated with the appropriate BIS authorization. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Consumer Awareness",
+    "source": "BIS Official Portal",
+    "clause": "Consumer Verification",
+    "keywords": [
+      "check bis",
+      "before buying",
+      "consumer",
+      "verify product",
+      "certificationdetails"
+    ]
+  },
+  {
+    "id": "BIS-064",
+    "question": "Can I continue selling products after my BIS licence expires?",
+    "answer": "If a valid BIS licence is required for the product, the product should not continue to be manufactured or sold using the BIS Standard Mark after the authorization expires, unless continued validity or another applicable provision is confirmed under the relevant BIS scheme. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Validity and Expiry of Licence",
+    "keywords": [
+      "licence expired",
+      "continue selling",
+      "after expiry",
+      "expired bis",
+      "validity"
+    ]
+  },
+  {
+    "id": "BIS-065",
+    "question": "What happens if BIS suspends or cancels my licence?",
+    "answer": "If a BIS licence is suspended or cancelled, the authorization to use the BIS Standard Mark may be affected accordingto the applicable order and scheme conditions. The manufacturer must follow the directions and compliance requirements issued under the applicable BIS procedure. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Suspension and Cancellation of Licence",
+    "keywords": [
+      "suspended licence",
+      "cancelled licence",
+      "bis suspension",
+      "licence cancelled",
+      "standard mark"
+    ]
+  },
+  {
+    "id": "BIS-066",
+    "question": "Can I transfer my BIS licence to another company or factory?",
+    "answer": "A BIS licence is generally linked to the authorized manufacturer, manufacturing location, product, and applicable licence conditions. A change of company or factorymay require a newapplication, transfer procedure, or other approval depending onthe applicable BIS scheme. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Changes in Licence Conditions",
+    "keywords": [
+      "transfer licence",
+      "another company",
+      "new factory",
+      "change manufacturer",
+      "bis transfer"
+    ]
+  },
+  {
+    "id": "BIS-067",
+    "question": "What should I do if my factory address changes after getting BIS certification?",
+    "answer": "You should inform BIS throughthe applicable procedure because a change in the manufacturinglocation may affect the scope or validityof the existing licence. The new location may require assessment or other approval before continuing certified production. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/07/Guidelines_for_Grant_of_Licence.pdf",
+    "standard": "BIS Conformity Assessment Regulations",
+    "source": "BIS Official Portal",
+    "clause": "Change in Manufacturing Location",
+    "keywords": [
+      "factory address change",
+      "change location",
+      "new factory address",
+      "inform bis",
+      "manufacturing location"
+    ]
+  },
+  {
+    "id": "BIS-068",
+    "question": "What is an Indian Standard (IS)?",
+    "answer": "An Indian Standard, commonly identified bythe prefix IS, is a document published by the Bureau of Indian Standards that specifies requirements, guidelines, characteristics, or methods for products, processes, services, or systems. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal - Standards",
+    "clause": "Indian Standards",
+    "keywords": [
+      "is standard",
+      "indian standard",
+      "what is is",
+      "is code",
+      "standard"
+    ]
+  },
+  {
+    "id": "BIS-069",
+    "question": "What is the difference between an Indian Standard and a BIS certification?",
+    "answer": "An Indian Standard specifies technical requirements or criteria, while BIS certification is aconformityassessment process that provides assurance that a product, process, or other subject meets applicable requirements under the relevant BIS scheme. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Standardization and Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Standards and Conformity Assessment",
+    "keywords": [
+      "difference",
+      "is standard",
+      "bis certification",
+      "standard vs certification",
+      "comparison"
+    ]
+  },
+  {
+    "id": "BIS-070",
+    "question": "What is the BIS Act 2016?",
+    "answer": "The BIS Act 2016 is the primary legislationgoverning the Bureau of Indian Standards and provides the legal frameworkfor standardization, conformity assessment, hallmarking, and related BIS activities in India. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Legal Framework",
+    "keywords": [
+      "bis act",
+      "bis act 2016",
+      "law",
+      "legislation",
+      "legal framework"
+    ]
+  },
+  {
+    "id": "BIS-071",
+    "question": "What are BIS rules?",
+    "answer": "BIS rules are legally framed provisions that support the implementation and administration of the BIS Act and related BIS activities. They provide operational and administrative requirements within the legal framework established for BIS. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016 and Applicable Rules",
+    "source": "BIS Official Portal",
+    "clause": "Rules",
+    "keywords": [
+      "bis rules",
+      "rules",
+      "what are rules",
+      "legal rules",
+      "bis law"
+    ]
+  },
+  {
+    "id": "BIS-072",
+    "question": "What are BIS regulations?",
+    "answer": "BIS regulations are detailed provisions made under the authority of the BIS Act to govern specific activities such as conformityassessment, certification, hallmarking, laboratories, and other BIS functions. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Regulatory Framework",
+    "source": "BIS Official Portal",
+    "clause": "Regulations",
+    "keywords": [
+      "bis regulations",
+      "regulation",
+      "rules and regulations",
+      "conformity regulations",
+      "bis requirements"
+    ]
+  },
+  {
+    "id": "BIS-073",
+    "question": "What is the difference between a BIS Act, Rules, and Regulations?",
+    "answer": "The BIS Act is the primarylaw enacted by Parliament. Rules are generally made to support implementationof the Act, while regulations provide detailed requirements and procedures for specific BIS activities under the authority provided by the Act. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Legal Framework",
+    "source": "BIS Official Portal",
+    "clause": "Act, Rules and Regulations",
+    "keywords": [
+      "act vs rules",
+      "rules vs regulations",
+      "difference",
+      "bis law",
+      "legal framework"
+    ]
+  },
+  {
+    "id": "BIS-074",
+    "question": "Are Indian Standards legally mandatory?",
+    "answer": "Indian Standards are generally voluntaryunless compliance with a particular standard is made mandatory througha law, regulation, Quality Control Order, or another applicable legal requirement. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Voluntary and Mandatory Standards",
+    "keywords": [
+      "mandatory standards",
+      "voluntary",
+      "is compulsory",
+      "indian standards law",
+      "legal requirement"
+    ]
+  },
+  {
+    "id": "BIS-075",
+    "question": "What is a Quality Control Order (QCO)?",
+    "answer": "A Quality Control Order is a legal order issued by the Government of India that makes compliance with specified Indian Standards and applicable conformity assessment requirements mandatory for identified products. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Compliance through QCO",
+    "keywords": [
+      "qco",
+      "quality control order",
+      "mandatory certification",
+      "government order",
+      "compulsory"
+    ]
+  },
+  {
+    "id": "BIS-076",
+    "question": "Who can make compliance with an Indian Standard mandatory?",
+    "answer": "The appropriate Government or competent authority can make compliance with specified Indian Standards mandatory through applicable legal instruments such as Quality Control Orders or other statutory requirements. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Mandatory Conformity Requirements",
+    "keywords": [
+      "who makes mandatory",
+      "government",
+      "mandatory standard",
+      "qco authority",
+      "legal requirement"
+    ]
+  },
+  {
+    "id": "BIS-077",
+    "question": "What happens if a company does not followa mandatory Indian Standard?",
+    "answer": "If compliance with an Indian Standard is legally mandatory, failure to comply may result in enforcement action under the applicable law, order, or regulation, including restrictions on manufacturing or sale and other applicable penalties. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Compliance and Enforcement",
+    "keywords": [
+      "not followstandard",
+      "violation",
+      "mandatory is",
+      "penalty",
+      "non compliance"
+    ]
+  },
+  {
+    "id": "BIS-078",
+    "question": "What is the difference between a standard and a law?",
+    "answer": "A standard generally provides technical requirements or agreed specifications, while a lawis legally enforceable. A standard may become legally mandatorywhen it is incorporated or referenced in a law, regulation, Quality Control Order, or other legal requirement. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Standardization Framework",
+    "source": "BIS Official Portal",
+    "clause": "Standards and Legal Requirements",
+    "keywords": [
+      "standard vs law",
+      "law",
+      "legal requirement",
+      "technical standard",
+      "difference"
+    ]
+  },
+  {
+    "id": "BIS-079",
+    "question": "What is the difference between a BIS rule and a Quality Control Order?",
+    "answer": "BIS rules support the implementation and administration of the BIS legal framework, while a Quality Control Order is aspecific legal instrument that can make compliance with specified Indian Standards and conformity requirements mandatory for particular products. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Legal and Regulatory Framework",
+    "source": "BIS Official Portal",
+    "clause": "Rules and Quality Control Orders",
+    "keywords": [
+      "rule vs qco",
+      "quality control order",
+      "bis rules",
+      "difference",
+      "mandatory product"
+    ]
+  },
+  {
+    "id": "BIS-080",
+    "question": "Where can I find official BIS laws, rules, regulations, and standards?",
+    "answer": "Official BIS laws, rules, regulations, certificationinformation, and standards-related resources canbe accessed through the official BIS portal and its authorized online services. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Information Framework",
+    "source": "BIS Official Portal",
+    "clause": "Official Information Sources",
+    "keywords": [
+      "find laws",
+      "bis website",
+      "rules",
+      "regulations",
+      "official information",
+      "standards"
+    ]
+  },
+  {
+    "id": "BIS-081",
+    "question": "Do BIS rules and regulations applyto every product in India?",
+    "answer": "No. The specific BIS requirements applicable to a product depend on its category, applicable Indian Standards, certification scheme, and whether compliance has been made mandatory through an applicable legal or regulatory requirement. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Applicabilityof BIS Requirements",
+    "keywords": [
+      "every product",
+      "all products",
+      "bis applicable",
+      "requirements",
+      "product category"
+    ]
+  },
+  {
+    "id": "BIS-082",
+    "question": "How do BIS laws and regulations help consumers?",
+    "answer": "The BIS legal and regulatory framework supports the development and implementationofstandards and conformity assessment systems that promote product quality, safety, reliability, consumer protection, and confidence in certified products. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Act 2016",
+    "source": "BIS Official Portal",
+    "clause": "Consumer Protection",
+    "keywords": [
+      "consumer protection",
+      "benefits",
+      "safety",
+      "quality",
+      "consumer",
+      "regulations"
+    ]
+  },
+  {
+    "id": "BIS-083",
+    "question": "Do BIS regulations apply only to manufacturers?",
+    "answer": "No. Depending on the applicable scheme or legal requirement, BIS regulations and conformity requirements may also affect importers, foreign manufacturers, sellers, jewellers, laboratories, certification bodies, and other relevant stakeholders. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/07/FMCS_Guidelines.pdf",
+    "standard": "BIS Regulatory Framework",
+    "source": "BIS Official Portal",
+    "clause": "Stakeholders and Applicability",
+    "keywords": [
+      "manufacturers",
+      "importers",
+      "sellers",
+      "jewellers",
+      "stakeholders",
+      "regulations"
+    ]
+  },
+  {
+    "id": "BIS-084",
+    "question": "Why does BIS have different rules and regulations for different activities?",
+    "answer": "Different BIS activities, such as product certification, compulsory registration, hallmarking, laboratoryrecognition, and standards development, have different technical and operational requirements. Separate rules and regulations help define the appropriate procedures for eachactivity. PDF Link: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Act-2016.pdf",
+    "standard": "BIS Regulatory Framework",
+    "source": "BIS Official Portal",
+    "clause": "Regulatory Structure",
+    "keywords": [
+      "different regulations",
+      "different schemes",
+      "why rules",
+      "bis activities",
+      "procedures"
+    ]
+  },
+  {
+    "id": "BIS-085",
+    "question": "How do I know which BIS law, rule, regulation, or standard applies to my product?",
+    "answer": "First identify the exact product and its intended use, then check the applicable Indian Standard, certification scheme, Quality Control Orders, and other relevant official BIS requirements. The applicable legal framework depends onthe specific product and activity. PDFLink: https://www.bis.gov.in/wp-content/uploads/2020/12/BIS-Conformity-Assessment-Regulati ons-2018.pdf",
+    "standard": "BIS Legal and Conformity Assessment Framework",
+    "source": "BIS Official Portal",
+    "clause": "Determining Applicable Requirements",
+    "keywords": [
+      "which law",
+      "which rule",
+      "which regulation",
+      "applicable standard",
+      "product requirements"
+    ]
   }
 ]
