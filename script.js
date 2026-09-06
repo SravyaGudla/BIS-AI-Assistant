@@ -292,7 +292,11 @@ let state = {
   cameraStream: null,
   recognition: null,
   isListening: false,
-  isSending: false
+  isSending: false,
+
+  // ChatGPT-style Voice Mode
+  isVoiceMode: false,
+  isVoiceModeSpeaking: false
 };
 
 const STORAGE_KEYS = {
@@ -339,6 +343,7 @@ const elements = {
   imageInput: document.getElementById("imageInput"),
   cameraBtn: document.getElementById("cameraBtn"),
   micBtn: document.getElementById("micBtn"),
+  voiceModeBtn: document.getElementById("voiceModeBtn"),
 
   attachmentPreview: document.getElementById("attachmentPreview"),
   attachmentPreviewImage: document.getElementById(
@@ -524,6 +529,10 @@ function attachEventListeners() {
     "click",
     toggleVoiceRecognition
   );
+  elements.voiceModeBtn.addEventListener(
+  "click",
+  toggleVoiceMode
+);
 
   document.addEventListener("keydown", handleGlobalKeydown);
 }
@@ -1444,11 +1453,15 @@ function handleImageSelection(event) {
     return;
   }
 
-  if (file.size > 10 * 1024 * 1024) {
-    showToast("Image must be smaller than 10 MB.");
-    event.target.value = "";
-    return;
-  }
+  if (file.size > 5 * 1024 * 1024) {
+
+  showToast("Image must be smaller than 5 MB.");
+
+  event.target.value = "";
+
+  return;
+
+}
 
   const reader = new FileReader();
 
@@ -1867,8 +1880,13 @@ function resetVoiceUI() {
 }
 
 /* =========================================================
+
    VOICE OUTPUT
-   ========================================================= */
+========================================================= */
+
+window.speechSynthesis.onvoiceschanged = () => {
+  window.speechSynthesis.getVoices();
+};
 
 let activeSpeechButton = null;
 
@@ -1884,8 +1902,9 @@ function toggleSpeech(text, button) {
     return;
   }
 
-  // If already speaking, stop immediately
+  // If already speaking, stop it
   if (window.speechSynthesis.speaking) {
+
     window.speechSynthesis.cancel();
 
     if (activeSpeechButton) {
@@ -1902,21 +1921,17 @@ function toggleSpeech(text, button) {
   utterance.lang =
     LANGUAGE_CODES[getCurrentLanguage()] || "en-IN";
 
-  // Natural speaking speed
   utterance.rate = 0.9;
   utterance.pitch = 1;
 
-  // Try to select a good available voice
   const voices = window.speechSynthesis.getVoices();
 
-  const languageCode = utterance.lang.split("-")[0];
+  const languageCode = utterance.lang
+    .split("-")[0]
+    .toLowerCase();
 
   const preferredVoice = voices.find((voice) =>
-    voice.lang.toLowerCase().startsWith(languageCode) &&
-    (
-      voice.name.includes("Google") ||
-      voice.name.includes("Microsoft")
-    )
+    voice.lang.toLowerCase().startsWith(languageCode)
   );
 
   if (preferredVoice) {
@@ -1929,26 +1944,457 @@ function toggleSpeech(text, button) {
   button.title = "Stop speaking";
 
   utterance.onend = () => {
+
     if (activeSpeechButton === button) {
+
       button.textContent = "🔊";
       button.title = "Read aloud";
+
       activeSpeechButton = null;
     }
+
   };
 
   utterance.onerror = () => {
+
     button.textContent = "🔊";
     button.title = "Read aloud";
+
     activeSpeechButton = null;
+
   };
 
   window.speechSynthesis.speak(utterance);
 }
 
 function stopSpeech() {
+
   if ("speechSynthesis" in window) {
     window.speechSynthesis.cancel();
   }
+
+  if (activeSpeechButton) {
+
+    activeSpeechButton.textContent = "🔊";
+    activeSpeechButton.title = "Read aloud";
+
+    activeSpeechButton = null;
+  }
+
+}
+
+/* =========================================================
+   CHATGPT-STYLE VOICE MODE
+========================================================= */
+
+function toggleVoiceMode() {
+
+  if (state.isVoiceMode) {
+    stopVoiceMode();
+  } else {
+    startVoiceMode();
+  }
+
+}
+
+
+function startVoiceMode() {
+
+  const Recognition =
+    getSpeechRecognitionConstructor();
+
+  if (!Recognition) {
+
+    showToast(
+      "Voice Mode is not supported in this browser."
+    );
+
+    return;
+  }
+
+  state.isVoiceMode = true;
+
+  elements.voiceModeBtn.classList.add(
+    "listening"
+  );
+
+  elements.voiceModeBtn.textContent = "■";
+
+  elements.voiceModeBtn.title =
+    "Stop Voice Mode";
+
+  showToast("Voice Mode started. Speak now.");
+
+  startVoiceModeListening();
+
+}
+
+
+function stopVoiceMode() {
+
+  state.isVoiceMode = false;
+
+  state.isVoiceModeSpeaking = false;
+
+  if (state.recognition) {
+
+    try {
+
+      state.recognition.stop();
+
+    } catch (error) {
+
+      console.warn(
+        "Voice Mode recognition stop failed:",
+        error
+      );
+
+    }
+
+  }
+
+  window.speechSynthesis.cancel();
+
+  state.recognition = null;
+
+  elements.voiceModeBtn.classList.remove(
+    "listening"
+  );
+
+  elements.voiceModeBtn.textContent = "🎤";
+
+  elements.voiceModeBtn.title =
+    "Start Voice Mode";
+
+  showToast("Voice Mode stopped.");
+
+}
+
+
+function startVoiceModeListening() {
+
+  if (!state.isVoiceMode) {
+    return;
+  }
+
+  const Recognition =
+    getSpeechRecognitionConstructor();
+
+  if (!Recognition) {
+    stopVoiceMode();
+    return;
+  }
+
+  const recognition = new Recognition();
+
+  state.recognition = recognition;
+
+  recognition.lang =
+    LANGUAGE_CODES[getCurrentLanguage()] ||
+    "en-IN";
+
+  recognition.continuous = false;
+
+  recognition.interimResults = false;
+
+  recognition.maxAlternatives = 1;
+
+
+  recognition.onresult = async (event) => {
+
+    const transcript =
+      event.results[0][0].transcript.trim();
+
+    if (!transcript) {
+      return;
+    }
+
+    elements.messageInput.value = transcript;
+
+    autoResizeTextarea();
+
+    updateComposerState();
+
+    await sendVoiceModeMessage(transcript);
+
+  };
+
+
+  recognition.onerror = (event) => {
+
+    console.error(
+      "Voice Mode recognition error:",
+      event.error
+    );
+
+    if (
+      event.error !== "aborted" &&
+      event.error !== "no-speech"
+    ) {
+
+      showToast(
+        "Voice input error. Please try again."
+      );
+
+    }
+
+  };
+
+
+  recognition.onend = () => {
+
+    state.recognition = null;
+
+  };
+
+
+  try {
+
+    recognition.start();
+
+  } catch (error) {
+
+    console.error(
+      "Voice Mode could not start:",
+      error
+    );
+
+  }
+
+}
+
+
+async function sendVoiceModeMessage(message) {
+
+  if (!state.isVoiceMode) {
+    return;
+  }
+
+  if (state.isSending) {
+    return;
+  }
+
+  state.isSending = true;
+
+  const userMessage = {
+
+    id: createId(),
+
+    role: "user",
+
+    content: message,
+
+    image: null,
+
+    createdAt: new Date().toISOString()
+
+  };
+
+
+  addMessageToCurrentChat(userMessage);
+
+  elements.emptyState.classList.add("hidden");
+
+  renderMessage(userMessage);
+
+  elements.messageInput.value = "";
+
+  autoResizeTextarea();
+
+  updateComposerState();
+
+  scrollChatToBottom();
+
+  addTemporaryTypingIndicator();
+
+
+  try {
+
+    const result =
+      await sendMessageToBackend(
+
+        message,
+
+        getCurrentLanguage(),
+
+        null
+
+      );
+
+
+    removeTemporaryTypingIndicator();
+
+
+    const aiMessage = {
+
+      id: createId(),
+
+      role: "ai",
+
+      content: result.answer,
+
+      references: result.references,
+
+      image: null,
+
+      createdAt: new Date().toISOString()
+
+    };
+
+
+    addMessageToCurrentChat(aiMessage);
+
+    renderMessage(aiMessage);
+
+    renderChatHistory();
+
+    scrollChatToBottom();
+
+
+    if (state.isVoiceMode) {
+
+      speakVoiceModeAnswer(
+        result.answer
+      );
+
+    }
+
+
+  } catch (error) {
+
+    console.error(
+      "Voice Mode error:",
+      error
+    );
+
+    removeTemporaryTypingIndicator();
+
+    showToast(
+      "Unable to get an AI response."
+    );
+
+
+    if (state.isVoiceMode) {
+
+      setTimeout(() => {
+
+        startVoiceModeListening();
+
+      }, 500);
+
+    }
+
+
+  } finally {
+
+    state.isSending = false;
+
+  }
+
+}
+
+
+function speakVoiceModeAnswer(text) {
+
+  if (
+    !state.isVoiceMode ||
+    !("speechSynthesis" in window)
+  ) {
+
+    if (state.isVoiceMode) {
+      startVoiceModeListening();
+    }
+
+    return;
+  }
+
+
+  window.speechSynthesis.cancel();
+
+
+  const utterance =
+    new SpeechSynthesisUtterance(text);
+
+
+  utterance.lang =
+    LANGUAGE_CODES[getCurrentLanguage()] ||
+    "en-IN";
+
+
+  utterance.rate = 0.9;
+
+  utterance.pitch = 1;
+
+
+  const voices =
+    window.speechSynthesis.getVoices();
+
+
+  const languageCode =
+    utterance.lang
+      .split("-")[0]
+      .toLowerCase();
+
+
+  const preferredVoice =
+    voices.find((voice) =>
+      voice.lang
+        .toLowerCase()
+        .startsWith(languageCode)
+    );
+
+
+  if (preferredVoice) {
+
+    utterance.voice =
+      preferredVoice;
+
+  }
+
+
+  state.isVoiceModeSpeaking = true;
+
+
+  utterance.onend = () => {
+
+    state.isVoiceModeSpeaking = false;
+
+
+    if (state.isVoiceMode) {
+
+      setTimeout(() => {
+
+        startVoiceModeListening();
+
+      }, 500);
+
+    }
+
+  };
+
+
+  utterance.onerror = () => {
+
+    state.isVoiceModeSpeaking = false;
+
+
+    if (state.isVoiceMode) {
+
+      setTimeout(() => {
+
+        startVoiceModeListening();
+
+      }, 500);
+
+    }
+
+  };
+
+
+  window.speechSynthesis.speak(
+    utterance
+  );
+
 }
 
 /* =========================================================

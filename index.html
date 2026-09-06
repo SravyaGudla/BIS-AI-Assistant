@@ -290,27 +290,39 @@
 
           <div class="composer-actions">
 
-            <button
-              class="composer-btn mic-btn"
-              id="micBtn"
-              type="button"
-              title="Voice input"
-              aria-label="Voice input"
-            >
-              🎙
-            </button>
+  <!-- Normal voice input -->
+  <button  
+    class="composer-btn mic-btn"  
+    id="micBtn"  
+    type="button"  
+    title="Voice input"  
+    aria-label="Voice input"  
+  > 
+    🎙 
+  </button>
 
-            <button
-              class="send-btn"
-              id="sendBtn"
-              type="button"
-              disabled
-              aria-label="Send message"
-            >
-              ➤
-            </button>
+  <!-- ChatGPT-style voice conversation -->
+  <button
+    class="composer-btn voice-mode-btn"
+    id="voiceModeBtn"
+    type="button"
+    title="Start Voice Mode"
+    aria-label="Start Voice Mode"
+  >
+    🎤
+  </button>
 
-          </div>
+  <button 
+    class="send-btn" 
+    id="sendBtn" 
+    type="button" 
+    disabled 
+    aria-label="Send message" 
+  > 
+    ➤ 
+  </button>
+
+</div>
         </div>
 
         <div class="composer-note">
